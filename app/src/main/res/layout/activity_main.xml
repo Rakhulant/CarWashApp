@@ -8,42 +8,6 @@
     android:orientation="vertical"
     android:layout_margin="5dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="10dp">
-
-        <Button
-            android:id="@+id/btnDate"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/colorAccent"
-            android:elevation="10dp"
-            android:gravity="center"
-            android:onClick="datePicker"
-            android:text="Select Date"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/btnTime"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:backgroundTint="@color/colorAccent"
-            android:elevation="10dp"
-            android:gravity="center"
-            android:onClick="timePicker"
-            android:text="Select Time"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-
     <View
         android:id="@+id/divider2"
         android:layout_width="match_parent"
@@ -67,7 +31,8 @@
                 android:layout_height="250dp"
                 android:layout_margin="15dp"
                 android:elevation="15dp"
-                app:cardCornerRadius="30dp">
+                app:cardCornerRadius="30dp"
+                android:onClick="carwashorder">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -194,6 +159,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Your Previous Washes" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Date"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Vehicle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Actions"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
 
     <ScrollView
         android:layout_width="match_parent"
