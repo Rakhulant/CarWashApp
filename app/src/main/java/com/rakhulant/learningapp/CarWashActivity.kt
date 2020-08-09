@@ -32,8 +32,18 @@ class CarWashActivity : AppCompatActivity() {
         TimePickerDialog(
             this,
             TimePickerDialog.OnTimeSetListener { timePicker: TimePicker?, i: Int, i2: Int ->
-                val time = "$i:$i2"
-                btnTime.text = time
+                if(i>12){
+                    val time = "${i-12}:$i2 PM"
+                    btnTime.text = time
+                }
+                else if(i == 12){
+                    val time = "$i:$i2 PM"
+                    btnTime.text = time
+                }
+                else{
+                    val time = "$i:$i2 AM"
+                    btnTime.text = time
+                }
             }, hr, min, false).show()
     }
 }
